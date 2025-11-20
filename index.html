@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS SDK v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+      emailjs.init('ESXOQoqcmhdBMU7Sf'); 
+  </script>
+</head>
+<body>
+  <div class="container">
+      <div class="card">
+          <h2>Confirm Your Order</h2>
+          <p class="subtitle">Fill in your details and get instant confirmation!</p>
+
+          <form id="orderForm">
+              <div class="input-group">
+                  <input type="text" id="name" required>
+                  <label for="name">Full Name</label>
+              </div>
+              <div class="input-group">
+                  <input type="text" id="phone" required>
+                  <label for="phone">Phone Number</label>
+              </div>
+              <div class="input-group">
+                  <input type="email" id="email" required>
+                  <label for="email">Email Address</label>
+              </div>
+              <button type="submit">Confirm Order</button>
+          </form>
+
+          <p id="status"></p>
+      </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
